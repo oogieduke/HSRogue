@@ -11,9 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 415f7bfa9bd8f7847bb2c20e87ac6f1c, type: 3}
   m_Name: Fireflame
   m_EditorClassIdentifier: 
-  cardName: Fireflame
-  cardText: Deals 4 damages to all enemy minions.
-  image: {fileID: 21300000, guid: 0871a064e6f8d4f4ab2daf182cdc0a3b, type: 3}
+  cardText: Deal 4 damages to all enemy minions.
+  image: {fileID: 21300000, guid: a1c316455564af9419e640e2c4fcb8d7, type: 3}
   rarity: {fileID: 21300002, guid: 7377f90f4577d4a4d9c150944702ca20, type: 3}
   manaCost: 7
   attack: 0

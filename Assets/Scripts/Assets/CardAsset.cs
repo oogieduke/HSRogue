@@ -5,7 +5,6 @@ using UnityEngine;
 public class CardAsset : ScriptableObject {
 
 	[Header("Info")]
-	public string cardName;
 	public string cardText;
 
 	[Header("Graphics")]

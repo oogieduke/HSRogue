@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using DG.Tweening;
 
+public enum CardType{ Minion, Spell };
 public class CardScript : MonoBehaviour {
 
 	GameManager gameManager;
 
-	public bool isDiscard = false;
-	public bool isOver = false;
+	public CardType cardType;
+	[HideInInspector] public bool isDiscard = false;
+	[HideInInspector] public bool isOver = false;
 
 	private void Start() {
 		gameManager = FindObjectOfType<GameManager>();

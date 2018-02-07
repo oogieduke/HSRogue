@@ -58,12 +58,14 @@ public class GameManager : MonoBehaviour {
 		int cardIndex = Random.Range(0, deckListCards.Count - 1);
 		Vector3 deckPosition = new Vector3(deck.transform.position.x, deck.transform.position.y, deck.transform.position.z - 1f);
 		GameObject newCard;
-		
+
 		if(deckListCards[cardIndex].health == 0) {
 			newCard = Instantiate(spell, deckPosition, deck.transform.rotation, cardHandler.transform);
+			newCard.GetComponent<CardScript>().cardType = CardType.Spell;
 		}
 		else {
 			newCard = Instantiate(card, deckPosition, deck.transform.rotation, cardHandler.transform);
+			newCard.GetComponent<CardScript>().cardType = CardType.Minion;
 		}
 
 		if (cardsInHand.Count >= maxCards ) {DiscardCardFromHand(newCard, num-i); return;};

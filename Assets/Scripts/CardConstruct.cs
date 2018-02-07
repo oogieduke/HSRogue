@@ -24,7 +24,7 @@ public class CardConstruct : MonoBehaviour {
 
     public void UpdateAsset(CardAsset asset)
     {
-        cardName.GetComponent<TextMeshProUGUI>().text = asset.cardName;
+        cardName.GetComponent<TextMeshProUGUI>().text = asset.name;
         cardText.GetComponent<TextMeshProUGUI>().text = asset.cardText;
         cardCost.GetComponent<TextMeshProUGUI>().text = asset.manaCost.ToString();
         cardImage.GetComponent<SpriteRenderer>().sprite = asset.image;

@@ -233,7 +233,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1666611374643244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.696564, y: -9.028403, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224924064286451822}
@@ -292,6 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3356ab74700baee46a5af97208582cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardType: 0
   isDiscard: 0
   isOver: 0
 --- !u!114 &114099490672425424
@@ -949,9 +950,9 @@ MonoBehaviour:
   cardText: {fileID: 1150279096353522}
   cardImage: {fileID: 1191046339376922}
   cardCost: {fileID: 1180950021600050}
+  cardRarity: {fileID: 1925659981953990}
   cardAttack: {fileID: 1025351078047014}
   cardLife: {fileID: 1600761839296512}
-  cardRarity: {fileID: 1925659981953990}
 --- !u!210 &210527916407836474
 SortingGroup:
   m_ObjectHideFlags: 1
