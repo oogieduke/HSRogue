@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] GameObject deck;
 	[SerializeField] GameObject discard;
 	[SerializeField] GameObject card;
+	[SerializeField] GameObject spell;
 	[SerializeField] GameObject discardCount;
 	[SerializeField] GameObject deckCount;
 
@@ -53,10 +54,20 @@ public class GameManager : MonoBehaviour {
 		for (int i = 0; i < num; i++)
 		{
 		if (deckListCards.Count <= 0) {return;};
-		GameObject newCard = Instantiate(card, deck.transform.position, deck.transform.rotation, cardHandler.transform);
+		
+		int cardIndex = Random.Range(0, deckListCards.Count - 1);
+		Vector3 deckPosition = new Vector3(deck.transform.position.x, deck.transform.position.y, deck.transform.position.z - 1f);
+		GameObject newCard;
+		
+		if(deckListCards[cardIndex].health == 0) {
+			newCard = Instantiate(spell, deckPosition, deck.transform.rotation, cardHandler.transform);
+		}
+		else {
+			newCard = Instantiate(card, deckPosition, deck.transform.rotation, cardHandler.transform);
+		}
+
 		if (cardsInHand.Count >= maxCards ) {DiscardCardFromHand(newCard, num-i); return;};
 		cardsInHand.Add(newCard);
-		int cardIndex = Random.Range(0, deckListCards.Count - 1);
 		newCard.GetComponent<CardConstruct>().UpdateAsset(deckListCards[cardIndex]);
 		deckListCards.Remove(deckListCards[cardIndex]);
 		}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415f7bfa9bd8f7847bb2c20e87ac6f1c, type: 3}
+  m_Name: Fireball
+  m_EditorClassIdentifier: 
+  cardName: Fireball
+  cardText: Deals 6 damage to a target.
+  image: {fileID: 21300000, guid: f8c6ab044c720514dbbf31895180d4fd, type: 3}
+  rarity: {fileID: 21300004, guid: 7377f90f4577d4a4d9c150944702ca20, type: 3}
+  manaCost: 4
+  attack: 0
+  health: 0
