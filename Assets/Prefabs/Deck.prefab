@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4960101780784122}
   - component: {fileID: 212661772509586054}
   - component: {fileID: 61933272455022594}
-  - component: {fileID: 114784582789310762}
   m_Layer: 0
   m_Name: Deck
   m_TagString: Untagged
@@ -67,19 +66,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.25, y: 3.25}
   m_EdgeRadius: 0
---- !u!114 &114784582789310762
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1677875821482230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91d3a8be7af149343943dbd8471e810b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  num: 1
-  gameManager: {fileID: 0}
 --- !u!212 &212661772509586054
 SpriteRenderer:
   m_ObjectHideFlags: 1

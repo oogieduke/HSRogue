@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour {
 		for (int i = 0; i < num; i++)
 		{
 		if (cardsInHand.Count <= 0 ) {return;};
-		GameObject card = cardsInHand[Random.Range(0, cardsInHand.Count -1)];
+		GameObject card = cardsInHand[Random.Range(0, cardsInHand.Count )];
 		DiscardCard(card);
 		}
 	}
