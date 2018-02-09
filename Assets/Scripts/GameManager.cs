@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] GameObject spell;
 	[SerializeField] GameObject discardCount;
 	[SerializeField] GameObject deckCount;
-	[SerializeField] GameObject manaPool;
 
 	float startXPos;
 
@@ -63,10 +62,12 @@ public class GameManager : MonoBehaviour {
 		if(deckListCards[cardIndex].health == 0) {
 			newCard = Instantiate(spell, deckPosition, deck.transform.rotation, cardHandler.transform);
 			newCard.GetComponent<CardScript>().cardType = CardType.Spell;
+			newCard.GetComponent<CardScript>().cardAsset = deckListCards[cardIndex];
 		}
 		else {
 			newCard = Instantiate(card, deckPosition, deck.transform.rotation, cardHandler.transform);
 			newCard.GetComponent<CardScript>().cardType = CardType.Minion;
+			newCard.GetComponent<CardScript>().cardAsset = deckListCards[cardIndex];
 		}
 
 		if (cardsInHand.Count >= maxCards ) {DiscardCardFromHand(newCard, num-i); return;};
@@ -81,6 +82,7 @@ public class GameManager : MonoBehaviour {
 		{
 		int cardIndex = Random.Range(0, deckListCards.Count - 1);
 		item.GetComponent<CardConstruct>().UpdateAsset(deckListCards[cardIndex]);
+		item.GetComponent<CardScript>().cardAsset = deckListCards[cardIndex];
 		deckListCards.Remove(deckListCards[cardIndex]);
 		item.GetComponent<CardScript>().isDiscard = true;		
 		item.GetComponent<CardScript>().isOver = false;

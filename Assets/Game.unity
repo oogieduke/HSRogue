@@ -1238,6 +1238,17 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 814159932}
   m_Script: {fileID: 11500000, guid: e1c29fa96bf6ce54582f67864084ffe8, type: 3}
+--- !u!114 &822810058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 822810056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e04ccfc1ddc064aae18980d38b0fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &877118939
 GameObject:
   m_ObjectHideFlags: 0
