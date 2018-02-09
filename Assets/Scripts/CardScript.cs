@@ -17,10 +17,12 @@ public class CardScript : MonoBehaviour {
 	
 	public Image glow;
 	ManaPool manaPool;
+	TurnManager turnManager;
 
 	private void Start() {
 		gameManager = FindObjectOfType<GameManager>();
 		manaPool = FindObjectOfType<ManaPool>();
+		turnManager = FindObjectOfType<TurnManager>();
 	}
 
 	private void Update() {
@@ -46,7 +48,8 @@ public class CardScript : MonoBehaviour {
 
     private void CheckIfPlayable()
     {
-        if (cardAsset.manaCost <= manaPool.currentMana) {isPlayable = true;}
+        if (!turnManager.playerTurn) {isPlayable = false; return;}
+		if (cardAsset.manaCost <= manaPool.currentMana) {isPlayable = true;}
 		else {isPlayable = false;}
     }
 

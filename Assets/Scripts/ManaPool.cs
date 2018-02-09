@@ -8,7 +8,8 @@ public class ManaPool : MonoBehaviour {
 	[SerializeField] GameObject manaObject;
 	[SerializeField] GameObject canvas;
 
-	public int currentMana =1;
+	public int currentMana = 1;
+	public int currentManaMax = 1;
 	public int maxMana = 10;
 
 	void Start () {
@@ -50,6 +51,18 @@ public class ManaPool : MonoBehaviour {
 			if (currentMana <= 0) {currentMana = 0; return;}
 			currentMana--;
 		}
+	}
+
+	public void AddCurrentMaxMana(int num) {
+		for (int i = 0; i < num; i++)
+		{
+			if (currentManaMax >= maxMana) {currentManaMax = maxMana; return;}
+			currentManaMax++;
+		}
+	}
+
+	public void RefillMana() {
+		currentMana = currentManaMax;
 	}
 
 	public void AddMaxMana (int num) {

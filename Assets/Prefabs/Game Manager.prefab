@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4925032200839134}
   - component: {fileID: 114312949891449452}
+  - component: {fileID: 114329528927138764}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -58,10 +59,21 @@ MonoBehaviour:
   spell: {fileID: 1482118843356808, guid: 0b9fc6eb1d2565d4eaada5914b5ec0e6, type: 2}
   discardCount: {fileID: 0}
   deckCount: {fileID: 0}
-  manaPool: {fileID: 0}
   maxCards: 10
   cardDistance: 1.2
   cardsInHand: []
   discardPile: []
   deckList: {fileID: 11400000, guid: 8509e2f82b40563489dbe0020d82edd8, type: 2}
   deckListCards: []
+--- !u!114 &114329528927138764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1518599716310404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e04ccfc1ddc064aae18980d38b0fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTurn: 0

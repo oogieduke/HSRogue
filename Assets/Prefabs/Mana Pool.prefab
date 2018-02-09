@@ -97,6 +97,7 @@ MonoBehaviour:
   manaObject: {fileID: 1479754562747280, guid: c6ed44e7c5a9d7648b7afb202768c823, type: 2}
   canvas: {fileID: 1034357229557984}
   currentMana: 1
+  currentManaMax: 1
   maxMana: 10
 --- !u!114 &114310289445814398
 MonoBehaviour:

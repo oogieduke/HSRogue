@@ -1,16 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TurnManager : MonoBehaviour {
 
-	// Use this for initialization
+	public bool playerTurn;
+	ManaPool manaPool;
+
 	void Start () {
-		
+		playerTurn = true;
+		manaPool = FindObjectOfType<ManaPool>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	public void SwitchTurn() {
+		playerTurn = !playerTurn;
+		if (playerTurn) { NewTurn(); }
 	}
+
+    void NewTurn()
+    {
+        manaPool.AddCurrentMaxMana(1);
+		manaPool.RefillMana();
+		GetComponent<GameManager>().AddCards(1);
+    }
 }

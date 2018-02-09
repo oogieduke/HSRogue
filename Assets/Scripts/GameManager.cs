@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour {
 	private void Start() {
 		startXPos = cardHandler.transform.position.x;
 		deckListCards.AddRange(deckList.cards);
+		AddCards(4);
 	}
 
 	public void Update ()
