@@ -12,11 +12,12 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] GameObject spell;
 	[SerializeField] GameObject discardCount;
 	[SerializeField] GameObject deckCount;
+	[SerializeField] GameObject manaPool;
 
 	float startXPos;
 
 	public int maxCards = 10;
-	public float cardDistance = 1;
+	public float cardDistance = 1.2f;
 	public List<GameObject> cardsInHand = new List<GameObject>();
 	public List<GameObject> discardPile = new List<GameObject>();
 	public DeckAsset deckList;

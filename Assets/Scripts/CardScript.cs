@@ -18,7 +18,7 @@ public class CardScript : MonoBehaviour {
 	private void Update() {
 		if(isDiscard){
 			float zDiscardPos = gameManager.discardPile.IndexOf(gameObject);
-			transform.DOMoveZ(-zDiscardPos/100f, 0f);
+			transform.DOMoveZ(-zDiscardPos/1000f, 0f);
 			canvas.GetComponent<Canvas>().sortingOrder = gameManager.discardPile.IndexOf(gameObject);
 			return;
 		}
@@ -38,9 +38,9 @@ public class CardScript : MonoBehaviour {
 		if(isDiscard){return;};
 		isOver = true;
 		transform.DOKill();
-		transform.DOScale(new Vector3(1.3f, 1.3f, 1f), 0.1f);
-		transform.DOMoveY(gameManager.cardHandler.transform.position.y + 1.4f, 0f);
-		transform.DOMoveZ(-0.2f, 0.1f);
+		transform.DOScale(new Vector3(1.3f, 1.3f, 1f), 0.2f);
+		transform.DOMoveY(gameManager.cardHandler.transform.position.y + 1.4f, 0.2f);
+		transform.DOMoveZ(-0.2f, 0f);
 		canvas.GetComponent<Canvas>().sortingOrder = 50;
 	}
 
