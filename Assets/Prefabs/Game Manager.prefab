@@ -59,6 +59,7 @@ MonoBehaviour:
   spell: {fileID: 1482118843356808, guid: 0b9fc6eb1d2565d4eaada5914b5ec0e6, type: 2}
   discardCount: {fileID: 0}
   deckCount: {fileID: 0}
+  minionHandler: {fileID: 0}
   maxCards: 10
   cardDistance: 1.2
   cardsInHand: []

@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-[ExecuteInEditMode]
-
 public class CardConstruct : MonoBehaviour {
 
 	public GameObject cardName;
@@ -15,7 +13,6 @@ public class CardConstruct : MonoBehaviour {
 	public GameObject cardRarity;
 	public GameObject cardAttack;
 	public GameObject cardLife;
-
 
 	private void OnEnable()
     {

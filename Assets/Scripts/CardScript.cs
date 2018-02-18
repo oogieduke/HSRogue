@@ -7,6 +7,9 @@ public enum CardType{ Minion, Spell };
 public class CardScript : MonoBehaviour {
 
 	GameManager gameManager;
+	ManaPool manaPool;
+	TurnManager turnManager;
+	MinionManager minionManager;
 
 	public GameObject canvas;
 	public CardType cardType;
@@ -16,13 +19,13 @@ public class CardScript : MonoBehaviour {
 	public bool isPlayable = false;
 	
 	public Image glow;
-	ManaPool manaPool;
-	TurnManager turnManager;
+	public GameObject minion;
 
 	private void Start() {
 		gameManager = FindObjectOfType<GameManager>();
 		manaPool = FindObjectOfType<ManaPool>();
 		turnManager = FindObjectOfType<TurnManager>();
+		minionManager = FindObjectOfType<MinionManager>();
 	}
 
 	private void Update() {
@@ -49,7 +52,12 @@ public class CardScript : MonoBehaviour {
     private void CheckIfPlayable()
     {
         if (!turnManager.playerTurn) {isPlayable = false; return;}
-		if (cardAsset.manaCost <= manaPool.currentMana) {isPlayable = true;}
+		if (cardAsset.manaCost <= manaPool.currentMana & cardType == CardType.Spell) {
+			isPlayable = true;
+		}
+		else if (cardAsset.manaCost <= manaPool.currentMana & minionManager.minionsOnBoard.Count < minionManager.maxMinion) {
+			isPlayable = true;
+		}
 		else {isPlayable = false;}
     }
 
@@ -77,10 +85,22 @@ public class CardScript : MonoBehaviour {
 	}
 
 	private void OnMouseDown() {
-		if(isDiscard){return;};
-		if(!isPlayable){return;};
-		isPlayable = false;
-		gameManager.DiscardCard(gameObject);
-		manaPool.SpendMana(cardAsset.manaCost);
-	}
+        if (isDiscard) { return; };
+        if (!isPlayable) { return; };
+        isPlayable = false;
+
+        gameManager.DiscardCard(gameObject);
+        manaPool.SpendMana(cardAsset.manaCost);
+
+        if (cardType == CardType.Spell) { return; }
+        PlayMinion();
+    }
+
+    private void PlayMinion() {
+        GameObject newMinion = Instantiate(minion, transform.position, transform.rotation);
+        newMinion.GetComponent<MinionScript>().cardAsset = cardAsset;
+        newMinion.GetComponent<MinionScript>().StartStats();
+        newMinion.transform.parent = gameManager.minionHandler;
+        minionManager.minionsOnBoard.Add(newMinion);
+    }
 }

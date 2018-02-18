@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] GameObject spell;
 	[SerializeField] GameObject discardCount;
 	[SerializeField] GameObject deckCount;
+	public Transform minionHandler;
 
 	float startXPos;
 
