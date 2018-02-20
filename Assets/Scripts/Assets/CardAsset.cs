@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class CardAsset : ScriptableObject {
 
@@ -20,11 +18,9 @@ public class CardAsset : ScriptableObject {
 	[Header("Special")]
 	public bool taunt;
 	public bool charge;
+	public bool shield;
 	public int numAttacks = 1;
-	public bool targeted;
 
 	[Header("Events")]
-	public List<SpellEvent> events = new List<SpellEvent>();
-	public List<SpellEvent> targetedEvents = new List<SpellEvent>();
-	public List<SpellEvent> deathEvents = new List<SpellEvent>();
+	public List<Events> events = new List<Events>();
 }

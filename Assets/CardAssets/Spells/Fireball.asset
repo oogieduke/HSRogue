@@ -17,3 +17,8 @@ MonoBehaviour:
   manaCost: 4
   attack: 0
   health: 0
+  taunt: 0
+  charge: 0
+  shield: 0
+  numAttacks: 1
+  events: []

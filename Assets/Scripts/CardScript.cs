@@ -87,12 +87,11 @@ public class CardScript : MonoBehaviour {
 	private void OnMouseDown() {
         if (isDiscard) { return; };
         if (!isPlayable) { return; };
-        isPlayable = false;
-
-        gameManager.DiscardCard(gameObject);
-        manaPool.SpendMana(cardAsset.manaCost);
 
         if (cardType == CardType.Spell) { return; }
+        isPlayable = false;
+        manaPool.SpendMana(cardAsset.manaCost);
+        gameManager.DiscardCard(gameObject);
         PlayMinion();
     }
 

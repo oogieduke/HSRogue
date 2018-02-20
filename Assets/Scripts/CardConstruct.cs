@@ -27,7 +27,9 @@ public class CardConstruct : MonoBehaviour {
         cardImage.GetComponent<Image>().sprite = asset.image;
         cardRarity.GetComponent<Image>().sprite = asset.rarity;
         
-        if (cardLife == null) {return;}
+        if (cardLife == null) {
+            return;
+        }
         cardAttack.GetComponent<TextMeshProUGUI>().text = asset.attack.ToString();
         cardLife.GetComponent<TextMeshProUGUI>().text = asset.health.ToString();  
     }

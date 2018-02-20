@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4745893493101070}
   - component: {fileID: 61713263784700116}
   - component: {fileID: 114077709349123608}
-  - component: {fileID: 114482021281599520}
+  - component: {fileID: 114743883771583708}
   m_Layer: 0
   m_Name: Minion
   m_TagString: Untagged
@@ -424,18 +424,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114482021281599520
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1318891755270044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 578e2bd8f27a25b4682515a4c922e82e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1124336413297150, guid: 0c11003ad170afc4f87f9b116df5af47, type: 2}
 --- !u!114 &114550006852253054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -448,6 +436,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &114743883771583708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1318891755270044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12e70bd31f228a048a14a678a36a697d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1124336413297150, guid: 0c11003ad170afc4f87f9b116df5af47, type: 2}
+  hitTarget: {fileID: 0}
 --- !u!114 &114929154517717624
 MonoBehaviour:
   m_ObjectHideFlags: 1
