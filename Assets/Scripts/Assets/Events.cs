@@ -6,6 +6,8 @@ public enum Effect {
 	Draw,
 	Discard,
 	Kill,
+	BuffAttack,
+	BuffHealth,
 	GainMana,
 	GainManaMax
 }
@@ -18,7 +20,8 @@ public enum Target {
 	EnemyMinions,
 	Ally,
 	AllyHero,
-	AllyMinions
+	AllyMinions,
+	Itself
 }
 
 public enum CardEvent {
@@ -41,7 +44,10 @@ public class Events {
 	[SerializeField] CardEvent _event;
 	[SerializeField] Effect _effect;
 	[SerializeField] int _value;
+	[SerializeField] bool randomValues;
+	[SerializeField] int _from;
+	[SerializeField] int _to;
 	[SerializeField] Target _target;
-	[SerializeField] bool random;
-	[SerializeField] int randValue;
+	[SerializeField] bool randomTargets;
+	[SerializeField] int _targets;
 }
